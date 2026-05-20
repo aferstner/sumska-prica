@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #FDFBF7;
+  --bg-secondary: #F0EBE1;
+  --text-primary: #2D3B2D;
+  --text-secondary: #5A6F5A;
+  --accent: #5B9A6F;
+  --accent-hover: #4A7C59;
+  --card-bg: #F5F0E8;
+  --card-border: #D4C9B8;
+  --gold: #E8B931;
+  --coral: #C9896D;
+  --success: #6BAF7A;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1A2E1A;
+  --bg-secondary: #253825;
+  --text-primary: #F0EBE1;
+  --text-secondary: #B0C8B0;
+  --accent: #8BC99B;
+  --accent-hover: #6BAF7A;
+  --card-bg: #253825;
+  --card-border: #3A5A3A;
+  --gold: #FFD700;
+  --coral: #E8A07A;
+  --success: #8BC99B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+html[data-fontsize="xl"] {
+  font-size: 20px;
+}
+
+body {
+  font-family: 'Lexend', 'Nunito', system-ui, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-family: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@keyframes fall-down {
+  from {
+    top: -60px;
+  }
+  to {
+    top: calc(100% + 60px);
+  }
+}
