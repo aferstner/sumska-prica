@@ -18,7 +18,7 @@ const LETTER_HINT = {
   'F': 'F, kao u riječi foto',
   // Lowercase confusables (dyslexia)
   'b': 'b, kao u riječi brod',      'd': 'd, kao u riječi drvo',
-  'p': 'p, kao u riječi pas',       'q': 'q, kao u riječi kviz',
+  'p': 'p, kao u riječi pas',
   'n': 'n, kao u riječi nos',       'm': 'm, kao u riječi more',
   'u': 'u, kao u riječi uho',
 };
@@ -37,7 +37,7 @@ const ALL_ROUNDS = [
   { target: 'I', level: 1, easy: ['I','L','T'],     hard: ['I','L','T','J'] },
   { target: 'V', level: 1, easy: ['V','U','N'],     hard: ['V','U','N','M'] },
   { target: 'P', level: 1, easy: ['P','F','B'],     hard: ['P','F','B','D'] },
-  { target: 'G', level: 1, easy: ['G','C','O'],     hard: ['G','C','O','Q'] },
+  { target: 'G', level: 1, easy: ['G','C','O'],     hard: ['G','C','O','D'] },
   { target: 'H', level: 1, easy: ['H','K','N'],     hard: ['H','K','N','M'] },
   { target: 'C', level: 1, easy: ['C','G','O'],     hard: ['C','G','O','D'] },
   { target: 'Z', level: 1, easy: ['Z','S','N'],     hard: ['Z','S','N','V'] },
@@ -45,10 +45,9 @@ const ALL_ROUNDS = [
   { target: 'D', level: 1, easy: ['D','B','P'],     hard: ['D','B','P','R'] },
   { target: 'L', level: 1, easy: ['L','I','T'],     hard: ['L','I','T','J'] },
   // ── Level 2 — lowercase confusables (dyslexia-focused) ──────────────────
-  { target: 'b', level: 2, easy: ['b','d','p'],     hard: ['b','d','p','q'] },
-  { target: 'd', level: 2, easy: ['d','b','p'],     hard: ['d','b','p','q'] },
-  { target: 'p', level: 2, easy: ['p','b','d'],     hard: ['p','b','d','q'] },
-  { target: 'q', level: 2, easy: ['q','p','d'],     hard: ['q','p','d','b'] },
+  { target: 'b', level: 2, easy: ['b','d','p'],     hard: ['b','d','p','g'] },
+  { target: 'd', level: 2, easy: ['d','b','p'],     hard: ['d','b','p','g'] },
+  { target: 'p', level: 2, easy: ['p','b','d'],     hard: ['p','b','d','g'] },
   { target: 'n', level: 2, easy: ['n','m','u'],     hard: ['n','m','u','v'] },
   { target: 'm', level: 2, easy: ['m','n','u'],     hard: ['m','n','u','w'] },
   { target: 'u', level: 2, easy: ['u','n','m'],     hard: ['u','n','m','v'] },
