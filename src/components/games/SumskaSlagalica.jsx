@@ -293,11 +293,14 @@ export default function SumskaSlagalica({ autoVoice, onStar, onFinish, difficult
   const wordLen  = currentWord.word.length;
   const isLong   = wordLen >= 6;
   const isMedium = wordLen === 5;
+  // Available pool tiles — fixed size, flex-wrap is fine there
   const tileSize = isLong
     ? 'w-12 h-12 sm:w-14 sm:h-14 text-xl sm:text-2xl'
     : isMedium
       ? 'w-14 h-14 sm:w-16 sm:h-16 text-2xl sm:text-3xl'
       : 'w-16 h-16 sm:w-20 sm:h-20 text-2xl sm:text-3xl';
+  // Slot tiles — font scales with word length (size handled by CSS grid)
+  const slotFont = isLong ? 'text-xl sm:text-2xl' : isMedium ? 'text-2xl sm:text-3xl' : 'text-3xl sm:text-4xl';
 
   return (
     <div className="flex-1 flex flex-col items-center justify-center px-4 py-8 gap-6 animate-fade-in no-select">
@@ -327,8 +330,14 @@ export default function SumskaSlagalica({ autoVoice, onStar, onFinish, difficult
       {/* Animal */}
       <div className="text-6xl sm:text-7xl" aria-hidden="true">{currentWord.emoji}</div>
 
-      {/* Drop slots */}
-      <div className="flex gap-2 sm:gap-3 justify-center flex-wrap">
+      {/* Drop slots — CSS grid: always one row, tiles scale to fill width */}
+      <div
+        className="grid gap-2 sm:gap-3 w-full"
+        style={{
+          gridTemplateColumns: `repeat(${wordLen}, 1fr)`,
+          maxWidth: `min(${wordLen * 80}px, 100%)`,
+        }}
+      >
         {slots.map((slot, i) => {
           const isHovered = hoverSlot === i && !slot;
           const isWrong   = slot?.wrong   === true;
@@ -340,8 +349,9 @@ export default function SumskaSlagalica({ autoVoice, onStar, onFinish, difficult
               ref={(el) => (slotRefs.current[i] = el)}
               onClick={() => handleSlotClick(i)}
               className={`
-                ${tileSize} rounded-xl font-bold
+                aspect-square rounded-xl font-bold
                 flex items-center justify-center
+                ${slotFont}
                 transition-all duration-150
                 ${isWrong   ? 'animate-shake cursor-pointer' : ''}
                 ${completed ? 'animate-bounce-in' : ''}
