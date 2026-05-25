@@ -20,7 +20,7 @@
 
 Svaka igra traje do **30 sekundi** i prilagođena je kratkom rasponu pažnje ciljnih korisnika. Sustav nagrađuje napredak zvjezdicama i bedževima — **bez oduzimanja bodova**.
 
-Projekt je izrađen kao završni zadatak kolegija **Izgradnja multimedijskih sustava** (ak. god. 2024./2025.).
+Projekt je izrađen kao završni zadatak kolegija **Izgradnja multimedijskih sustava** (ak. god. 2025./2026.).
 
 ---
 
@@ -64,7 +64,7 @@ Projekt je izrađen kao završni zadatak kolegija **Izgradnja multimedijskih sus
 
 **Augustin Ferstner**  
 Kolegij: Izgradnja multimedijskih sustava  
-Akademska godina: 2024./2025.
+Akademska godina: 2025./2026.
 
 ---
 
