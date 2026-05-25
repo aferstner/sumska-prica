@@ -26,12 +26,12 @@ Projekt je izrađen kao završni zadatak kolegija **Izgradnja multimedijskih sus
 
 ## 🎮 Mini-igre
 
-| Igra | Vještina | Trajanje |
+| Igra | Vještina |
 |---|---|---|
-| 🎵 **Zvučna Zagonetka** | Fonološka svjesnost | 3–5 min |
-| 🍃 **Kamo je nestao listić?** | Vizualna pažnja & radna memorija | 3–5 min |
-| 🧩 **Šumska Slagalica** | Pravopis & slaganje riječi | 3–5 min |
-| 🌿 **Eko-Čistač** | Brzina reakcije & selektivna pažnja | 3–5 min |
+| 🎵 **Zvučna Zagonetka** | Fonološka svjesnost |
+| 🍃 **Kamo je nestao listić?** | Vizualna pažnja & radna memorija |
+| 🧩 **Šumska Slagalica** | Pravopis & slaganje riječi |
+| 🌿 **Eko-Čistač** | Brzina reakcije & selektivna pažnja |
 
 ---
 
