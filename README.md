@@ -27,11 +27,11 @@ Projekt je izrađen kao završni zadatak kolegija **Izgradnja multimedijskih sus
 ## 🎮 Mini-igre
 
 | Igra | Vještina |
-|---|---|---|
+|---|---|
 | 🎵 **Zvučna Zagonetka** | Fonološka svjesnost |
-| 🍃 **Kamo je nestao listić?** | Vizualna pažnja & radna memorija |
-| 🧩 **Šumska Slagalica** | Pravopis & slaganje riječi |
-| 🌿 **Eko-Čistač** | Brzina reakcije & selektivna pažnja |
+| 🍃 **Kamo je nestao listić?** | Vizualna pažnja i radna memorija |
+| 🧩 **Šumska Slagalica** | Pravopis i slaganje riječi |
+| 🌿 **Eko-Čistač** | Brzina reakcije i selektivna pažnja |
 
 ---
 
