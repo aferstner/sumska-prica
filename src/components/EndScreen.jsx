@@ -13,11 +13,8 @@ export default function EndScreen({ stars, savedStats = {}, badges = [], onResta
   const totalGamesPlayed = Object.values(savedStats.gamesPlayed || {}).reduce((a, b) => a + b, 0);
 
   useEffect(() => {
-    if (autoVoice) {
-      const badgeMsg = badges.length > 0 ? ` Zaradili ste ${badges.length} ${badges.length === 1 ? 'bedž' : 'bedževa'}!` : '';
-      speak(`${praise} Skupili ste ${stars} zvjezdica!${badgeMsg}`);
-    }
-  }, [autoVoice, praise, stars, badges.length]);
+    if (autoVoice) speak(praise);
+  }, [autoVoice, praise]);
 
   return (
     <main className="flex-1 flex flex-col items-center justify-center px-6 py-10 gap-7 animate-fade-in">

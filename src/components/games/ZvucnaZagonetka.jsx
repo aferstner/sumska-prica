@@ -5,22 +5,22 @@ import ProgressBar from '../ProgressBar';
 import TimerBar from '../TimerBar';
 
 const LETTER_HINT = {
-  'A': 'A, kao u riječi auto',      'O': 'O, kao u riječi oko',
-  'M': 'M, kao u riječi mama',      'K': 'K, kao u riječi kuća',
-  'S': 'S, kao u riječi sunce',     'L': 'L, kao u riječi lopta',
-  'T': 'T, kao u riječi tata',      'N': 'N, kao u riječi nos',
-  'R': 'R, kao u riječi riba',      'E': 'E, kao u riječi evo',
-  'I': 'I, kao u riječi igra',      'U': 'U, kao u riječi uho',
-  'V': 'V, kao u riječi voda',      'P': 'P, kao u riječi pas',
-  'G': 'G, kao u riječi gora',      'H': 'H, kao u riječi hlače',
-  'C': 'C, kao u riječi cesta',     'Z': 'Z, kao u riječi zima',
-  'J': 'J, kao u riječi jabuka',    'D': 'D, kao u riječi drvo',
-  'F': 'F, kao u riječi foto',
+  'A': 'auto',    'O': 'oko',
+  'M': 'mama',    'K': 'kuća',
+  'S': 'sunce',   'L': 'lopta',
+  'T': 'tata',    'N': 'nos',
+  'R': 'riba',    'E': 'evo',
+  'I': 'igra',    'U': 'uho',
+  'V': 'voda',    'P': 'pas',
+  'G': 'gora',    'H': 'hlače',
+  'C': 'cesta',   'Z': 'zima',
+  'J': 'jabuka',  'D': 'drvo',
+  'F': 'foto',
   // Lowercase confusables (dyslexia)
-  'b': 'b, kao u riječi brod',      'd': 'd, kao u riječi drvo',
-  'p': 'p, kao u riječi pas',
-  'n': 'n, kao u riječi nos',       'm': 'm, kao u riječi more',
-  'u': 'u, kao u riječi uho',
+  'b': 'brod',    'd': 'drvo',
+  'p': 'pas',
+  'n': 'nos',     'm': 'more',
+  'u': 'uho',
 };
 
 // Each round has easy_options (3) and hard_options (4)
@@ -94,7 +94,7 @@ export default function ZvucnaZagonetka({ autoVoice, onStar, onFinish, difficult
   const speakInstruction = useCallback(() => {
     if (!round) return;
     const hint = LETTER_HINT[round.target] || round.target;
-    speak(`Pronađi slovo ${hint}!`);
+    speak(`Stisni na prvo slovo u riječi ${hint}!`);
   }, [round]);
 
   useEffect(() => {
@@ -138,7 +138,7 @@ export default function ZvucnaZagonetka({ autoVoice, onStar, onFinish, difficult
       errorsRef.current += 1;
       if (autoVoice) {
         const hint = LETTER_HINT[round.target] || round.target;
-        speak(errorsRef.current >= 2 ? `Pokušaj ponovo! Tražimo ${hint}` : 'Pokušaj ponovo!');
+        speak(errorsRef.current >= 2 ? `Pokušaj ponovo! Traži prvo slovo u ${hint}!` : 'Pokušaj ponovo!');
       }
       setTimeout(() => {
         setFeedback(null);
